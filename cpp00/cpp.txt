@@ -1,0 +1,113 @@
+base:
+
+std::cout << "hello word"; ecrire sur la sortie standar
+std::getline >> buffer rcuperer dans l entree standar
+std::cin >> buffer
+class test {
+	int foo;
+	public:
+		constructeur(fonction) : test(void); //initialiser souvent dans le constructeur
+		destructeur : ~test(void);
+		void fonct(void);
+	private:
+};
+test::test(void)
+{
+	std::cout << "constructeur call" << std::endl;
+	this->foo = 42; // this = pointer sur l instance courante
+	this->fonct();
+	return;
+}
+test::~test(void)
+{
+	std::cout << "destructeur call" << std::endl;
+	return;
+}
+void	test::fonct(void)
+{
+	std::cout << "fonction call" << std::endl;
+	return;
+}
+int main
+{
+	test instance(instance de test);
+	return (0);
+}
+
+param dans constructeur:
+
+class test {
+	int foo;
+	public:
+		char a1;
+		int a2;
+		float a3;
+		constructeur(fonction) : test(char p1, char p2, char p3);
+		destructeur : ~test(void);
+		void fonct(void);
+};
+
+test::test(char p1, int p2, float p3) ou test::test(char p1, int p2, float p3) : a1(p1) a2(p2) a3(p3)
+{
+	this->a1 = p1;
+	std::cout << "constructeur call" << std::endl;
+	return;
+}
+test::~test(void)
+{
+	std::cout << "destructeur call" << std::endl;
+	return;
+}
+void	test::fonct(void)
+{
+	std::cout << "fonction call" << std::endl;
+	return;
+}
+int main
+{
+	test instance(instance de test);
+	return (0);
+}
+
+utulisation de const:
+
+class test {
+	public:
+		float const pi;
+		int qd;
+		test(flost const f);
+		~test(void);
+		void fonct(void) const(ne pourra jamais assigner une valeur genre this->qlc = qlc jamais modifer l instance de ma class la dedans);
+};
+
+test::test(float const f) : pi(f), qd(42) pi est initaliser ce n est pas uen assiniation sinon ca ne marcherai pas
+{
+	std::cout << "constructeur call" << std::endl;
+	return;
+}
+test::~test(void)
+{
+	std::cout << "destructeur call" << std::endl;
+	return;
+}
+void	test::fonct const(void)
+{
+	std::cout << "fonction call" << std::endl;
+	return;
+}
+
+private et public:
+
+class test {
+	public:
+		float const pi;
+		int qd;
+		test(flost const f);
+		~test(void);
+		void fonct(void)
+		private: (tout ce que je met en priver pour la careter mettre un _ devan) utilisable que dans le constructeur ou fonction publique
+
+};
+
+accesor:
+fonction getnom() const recupere une valeur privee mais jamais modifie ou assigne et setnom()
