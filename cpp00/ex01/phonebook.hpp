@@ -7,8 +7,13 @@
 class PhoneBook {
 	public:
 		PhoneBook();
+		void set_pn_contact();
+		void display_contact();
 		~PhoneBook();
 	private:
+		Contact contact[8];
+		int index;
+		int more_contact;
 };
 
 
