@@ -2,9 +2,7 @@
 
 int main()
 {
-	Zombie *Z1 = newZombie("Foo");
-	Z1->announce();
-	randomChump("Chump");
-	delete(Z1);
+	Zombie *Horde = zombieHorde(3, "foo");
+	delete[] Horde;
 	return (0);
 }
