@@ -13,7 +13,7 @@ class PhoneBook {
 	private:
 		Contact contact[8];
 		int index;
-		int more_contact;
+		int contactCount;
 };
 
 

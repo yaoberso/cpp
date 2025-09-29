@@ -20,7 +20,7 @@ class Contact {
 		std::string get_fn();
 		std::string get_ln();
 		std::string get_nn();
-		std::string get_ph();
+		std::string get_pn();
 		std::string get_ds();
 };
 

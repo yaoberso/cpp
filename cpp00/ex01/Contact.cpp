@@ -32,7 +32,7 @@ std::string Contact::get_nn()
 {
     return(nickname);
 }
-std::string Contact::get_ph()
+std::string Contact::get_pn()
 {
     return(phone_number);
 }
